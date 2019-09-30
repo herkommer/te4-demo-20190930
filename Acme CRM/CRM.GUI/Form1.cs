@@ -43,6 +43,8 @@ namespace CRM.GUI
 
         private void Button2_Click(object sender, EventArgs e)
         {
+            listBox1.Items.Clear();
+
             //Skriv ut alla kunder som ligger i repositoryt
             foreach (Customer c in MyCustomers)
             {
