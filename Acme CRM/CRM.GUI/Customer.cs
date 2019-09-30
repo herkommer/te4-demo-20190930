@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace CRM.GUI
 {
-    class Customer
+    public class Customer
     {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public bool VIP { get; set; }
     }
 }
