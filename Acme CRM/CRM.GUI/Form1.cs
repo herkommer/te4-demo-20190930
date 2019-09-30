@@ -20,6 +20,7 @@ namespace CRM.GUI
             InitializeComponent();
 
             button1.Text = "Spara kund";
+            button2.Text = "Visa kunder";
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -38,6 +39,19 @@ namespace CRM.GUI
 
             textBox1.Focus();
 
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            //Skriv ut alla kunder som ligger i repositoryt
+            foreach (Customer c in MyCustomers)
+            {
+                listBox1.Items.Add(c); //vad kommer vi få se utskrivet?
+                //OBS: använd INTE c.FirstName
+                //hur ska vi då styra vad som ska visa?
+                //funktionen heter .ToString() och alla har den
+                //vi vill skriva om den funktionen!
+            }
         }
     }
 }
