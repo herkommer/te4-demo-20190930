@@ -13,7 +13,9 @@ namespace CRM.GUI
 {
     public partial class Form1 : Form
     {
-        ArrayList MyPersons = new ArrayList();
+        //Refactoring: vi ersätter ArrayList med en List<T>
+        //Dvs en Generic, eller starkt typad lista
+        List<Person> MyPersons = new List<Person>();
 
         public Form1()
         {
