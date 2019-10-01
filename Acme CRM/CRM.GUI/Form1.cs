@@ -75,6 +75,14 @@ namespace CRM.GUI
             //Här hamnar vi om vi väljer något i listan
             //klick eller piltangenter
             MessageBox.Show(string.Format("Jag är en {0}",listBox1.SelectedItem.GetType().Name));
+
+            //specifik info beroende på vilken typ vi har att göra med
+            if (listBox1.SelectedItem.GetType().Name == "Customer")
+            {
+                //Se till att object skärper sig, dvs explicit blir vad den är och alltid varit
+                //en Customer igen, så vi kan prata egenskaper som VIP
+                MessageBox.Show(string.Format("VIP status: {0}", ((Customer)listBox1.SelectedItem).VIP));
+            }
         }
     }
 }
